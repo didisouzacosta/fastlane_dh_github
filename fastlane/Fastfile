@@ -59,7 +59,6 @@ platform :ios do
     keychain_password = TEMP_KEYCHAIN_PASSWORD
     ensure_temp_keychain(keychain_name, keychain_password)
 
-
     update_certificates
 
     # Incrementa do build number
@@ -86,14 +85,14 @@ platform :ios do
     increment_build_number(xcodeproj: "Testando Fastlane.xcodeproj")
 
     # Faz o build do aplicativo gerando o .ipa
-    build_app(scheme: "Testando Fastlane")
+    # build_app(scheme: "Testando Fastlane")
 
     # Envia para a loja
-    deliver(
-      force: true, # Skip HTMl report verification
-      skip_metadata: true,
-      skip_screenshots: true
-    )
+    # deliver(
+    #   force: true, # Skip HTMl report verification
+    #   skip_metadata: true,
+    #   skip_screenshots: true
+    # )
 
     delete_temp_keychain(keychain_name)
   end
