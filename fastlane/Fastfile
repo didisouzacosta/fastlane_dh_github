@@ -65,10 +65,10 @@ platform :ios do
     increment_build_number(xcodeproj: "Testando Fastlane.xcodeproj")
 
     # Faz o build do aplicativo gerando o .ipa
-    build_app(scheme: "Testando Fastlane")
+    # build_app(scheme: "Testando Fastlane")
     
     # Envia para Test Flight
-    upload_to_testflight
+    # upload_to_testflight
 
     delete_temp_keychain(keychain_name)
   end
